@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.uidemo.StartActivity">
+    <com.example.administrator.uidemo.view.LauncherView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/launcher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:layout_gravity="bottom|center"
+        android:id="@+id/tv_start"
+        android:gravity="center"
+        android:background="#aaa"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="点击开始动画"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp" />
+
+</FrameLayout>

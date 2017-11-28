@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_blue"
+    android:gravity="center_horizontal"
+    tools:context="com.example.administrator.uidemo.EditTextActivity">
+
+    <!--met_baseColor 自定义字体颜色-->
+    <!--met_primaryColor  修改输入框颜色-->
+    <!--met_floatingLabel  EditText输入时,hint内容将缩小位移到输入框上方-->
+    <!--met_floatingLabelText   hint内容-->
+    <!--met_singleLineEllipsis   一行-->
+    <!--met_errorColor 警告色-->
+    <!--met_minCharacters/met_maxCharacters  最少  最多-->
+    <!--met_helperText  帮助提示-->
+    <!--app:met_accentTypeface="fonts/Roboto-LightItalic.ttf"  自定义字体-->
+    <!--met_hideUnderline  删除默认下划线-->
+    <!--met_iconLeft/met_iconRight   放置图片-->
+    <!--met_clearButton 显示删除图标-->
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Basic"
+        app:met_clearButton= "true"
+        app:met_iconLeft="@mipmap/ic_launcher"
+        app:met_iconRight="@mipmap/ic_launcher"
+        app:met_hideUnderline="true"
+        app:met_helperText="Integer"
+        app:met_minCharacters="5"
+        app:met_maxCharacters="10"
+        app:met_errorColor="#e40e0e"
+        app:met_singleLineEllipsis="true"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="哈喽"
+        app:met_primaryColor="#982360"
+        app:met_baseColor="#0056d3"/>
+
+    <!--波浪-->
+    <com.example.administrator.uidemo.view.WaveView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--电影级TextView动画效果  compile 'com.roger.match.library:library:1.0.1'-->
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:background="#000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.roger.match.library.MatchTextView
+            app:text="MATCH VIEW"
+            app:textSize="15dp"
+            app:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.roger.match.library.MatchButton
+            app:text="Yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
