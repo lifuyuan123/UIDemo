@@ -23,6 +23,14 @@ public  abstract class CommonAdapter<T> extends RecyclerView.Adapter<CommonAdapt
     private int itemId;//布局文件
     private ViewDataBinding binding;//找控件id工具
 
+    public List<T> getLists() {
+        return lists;
+    }
+
+    public void setLists(List<T> lists) {
+        this.lists = lists;
+    }
+
     public CommonAdapter(List<T> lists, int itemId) {
         this.lists = lists;
         this.itemId = itemId;

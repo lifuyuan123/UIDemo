@@ -125,6 +125,10 @@ public class MainActivity extends AppCompatActivity {
                     case "可拖动按钮":
                         startActivity(new Intent(MainActivity.this,FloatImageActivity.class));
                         break;
+                    case "自定义view":
+                        startActivity(new Intent(MainActivity.this,CustomActivity.class));
+                        break;
+
                 }
 
             }
@@ -145,6 +149,8 @@ public class MainActivity extends AppCompatActivity {
         list.add("沉浸放大效果");
         list.add("沉浸title动画效果");
         list.add("可拖动按钮");
+        list.add("自定义view");
+
 
     }
 

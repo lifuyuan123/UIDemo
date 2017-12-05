@@ -3,6 +3,9 @@
     package="com.example.administrator.uidemo">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -28,7 +31,16 @@
         <activity android:name=".EnlargeActivity" />
         <activity android:name=".AnimaTitleActivity" />
         <activity android:name=".FloatImageActivity" />
-        <activity android:name=".view.swipelayout.MyBaseActivity"></activity>
+        <activity android:name=".view.swipelayout.MyBaseActivity" />
+        <activity android:name=".PhotoActivity" />
+        <activity android:name=".CustomActivity" />
+        <activity android:name=".BaseViewActivity" />
+        <activity android:name=".PieViewActivity" />
+        <activity android:name=".PathBaseActivity" />
+        <activity android:name=".BSRActivity" />
+        <activity android:name=".BSR2Activity" />
+        <activity android:name=".HeartActivity" />
+        <activity android:name=".PelletActivity"></activity>
     </application>
 
 </manifest>
