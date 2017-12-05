@@ -40,7 +40,9 @@
         <activity android:name=".BSRActivity" />
         <activity android:name=".BSR2Activity" />
         <activity android:name=".HeartActivity" />
-        <activity android:name=".PelletActivity"></activity>
+        <activity android:name=".PelletActivity" />
+        <activity android:name=".AnimaActivity" />
+        <activity android:name=".FreeFallActivity"></activity>
     </application>
 
 </manifest>

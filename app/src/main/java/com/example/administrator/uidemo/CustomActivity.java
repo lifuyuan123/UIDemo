@@ -45,6 +45,7 @@ public class CustomActivity extends AppCompatActivity {
         stringList.add("贝塞尔曲线(二)");
         stringList.add("贝塞尔曲线(心型)");
         stringList.add("贝塞尔曲线(变化的圆球)");
+        stringList.add("属性动画");
 
         adapter=new CommonAdapter<String>(stringList,R.layout.main_item) {
             @Override
@@ -80,6 +81,9 @@ public class CustomActivity extends AppCompatActivity {
                         break;
                     case "贝塞尔曲线(变化的圆球)":
                         startActivity(new Intent(CustomActivity.this,PelletActivity.class));
+                        break;
+                    case "属性动画":
+                        startActivity(new Intent(CustomActivity.this,AnimaActivity.class));
                         break;
                 }
 
