@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.administrator.uidemo.view.Bezier.Pellet;
+import com.example.administrator.uidemo.view.MagicCircle;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

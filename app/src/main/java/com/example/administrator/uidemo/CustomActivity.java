@@ -46,6 +46,7 @@ public class CustomActivity extends AppCompatActivity {
         stringList.add("贝塞尔曲线(心型)");
         stringList.add("贝塞尔曲线(变化的圆球)");
         stringList.add("属性动画");
+        stringList.add("自定义ViewGroup");
 
         adapter=new CommonAdapter<String>(stringList,R.layout.main_item) {
             @Override
@@ -84,6 +85,9 @@ public class CustomActivity extends AppCompatActivity {
                         break;
                     case "属性动画":
                         startActivity(new Intent(CustomActivity.this,AnimaActivity.class));
+                        break;
+                    case "自定义ViewGroup":
+                        startActivity(new Intent(CustomActivity.this,CustomViewGroupActivity.class));
                         break;
                 }
 

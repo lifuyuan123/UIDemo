@@ -42,7 +42,8 @@
         <activity android:name=".HeartActivity" />
         <activity android:name=".PelletActivity" />
         <activity android:name=".AnimaActivity" />
-        <activity android:name=".FreeFallActivity"></activity>
+        <activity android:name=".FreeFallActivity" />
+        <activity android:name=".CustomViewGroupActivity"></activity>
     </application>
 
 </manifest>

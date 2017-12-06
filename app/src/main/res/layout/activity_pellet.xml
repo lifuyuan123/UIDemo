@@ -12,4 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <com.example.administrator.uidemo.view.MagicCircle
+        android:id="@+id/MagicCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>
