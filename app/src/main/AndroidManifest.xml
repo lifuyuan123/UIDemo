@@ -43,7 +43,8 @@
         <activity android:name=".PelletActivity" />
         <activity android:name=".AnimaActivity" />
         <activity android:name=".FreeFallActivity" />
-        <activity android:name=".CustomViewGroupActivity"></activity>
+        <activity android:name=".CustomViewGroupActivity" />
+        <activity android:name=".TakePhotoActivity"></activity>
     </application>
 
 </manifest>
