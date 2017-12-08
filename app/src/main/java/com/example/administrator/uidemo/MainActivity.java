@@ -8,8 +8,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.administrator.uidemo.Utils.StatusBarUtil;
 import com.example.administrator.uidemo.adapter.CommonAdapter;
@@ -41,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
     private List<String> list = new ArrayList<>();
     private HeaderAndFooterWrapper headerAndFooterWrapper;//头尾布局适配器 传入我们的adapter
     private View footView;
+
+    private long firstTime=0;
+    private long secondTime=0;
+    private long differenceTime=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -159,4 +165,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if(keyCode==KeyEvent.KEYCODE_BACK){
+            firstTime=System.currentTimeMillis();
+            differenceTime=firstTime-secondTime;//时间差
+            secondTime=firstTime;//将第一次进入的时间赋值给secondTime
+            if (differenceTime>2000){
+                Toast.makeText(this, "再按一次退出", Toast.LENGTH_SHORT).show();
+            }else {
+                System.exit(0);//退出程序
+            }
+        }
+
+        return true;//返回值和 onTouch事件相似   返回为true表示不再向下事件分发   false表示向下分发
+    }
 }

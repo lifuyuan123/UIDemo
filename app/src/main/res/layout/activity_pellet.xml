@@ -7,10 +7,10 @@
     android:orientation="vertical"
     tools:context="com.example.administrator.uidemo.PelletActivity">
 
-    <com.example.administrator.uidemo.view.Bezier.Pellet
-        android:id="@+id/pellt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <!--<com.example.administrator.uidemo.view.Bezier.Pellet-->
+        <!--android:id="@+id/pellt"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
 
     <com.example.administrator.uidemo.view.MagicCircle
         android:id="@+id/MagicCircle"

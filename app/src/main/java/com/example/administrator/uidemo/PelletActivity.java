@@ -11,8 +11,8 @@ import butterknife.ButterKnife;
 
 public class PelletActivity extends AppCompatActivity {
 
-    @BindView(R.id.pellt)
-    Pellet pellt;
+    @BindView(R.id.MagicCircle)
+    MagicCircle pellt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

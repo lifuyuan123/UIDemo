@@ -42,6 +42,7 @@ public class Pellet extends View {
 
     private float[] mData=new float[8];//数据点
     private float[] mContol=new float[16];//控制点
+    private Path path;
 
 
 
@@ -72,6 +73,7 @@ public class Pellet extends View {
 
     //初始化
     private void init() {
+        path=new Path();
         paint=new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColor(Color.BLUE);
         paint.setStyle(Paint.Style.FILL);
@@ -91,6 +93,8 @@ public class Pellet extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+
+        path.reset();
         //移到中心位置
         canvas.translate(mWith,mHight);
         //绘制四段贝塞尔
@@ -212,6 +216,7 @@ public class Pellet extends View {
            if(percentage>0.9&&percentage<=1){
                mode5(percentage);
            }
+        invalidate();//刷新
         }
 
 
@@ -219,9 +224,9 @@ public class Pellet extends View {
     private void mode5(float percentage) {
         mode4(0.9f);
         float value= (percentage -0.9f)*10;
-        mData[6]-=30*value;
-        mContol[10]-=30*value;
-        mContol[12]-=30*value;
+        mData[6]-=20*value;
+        mContol[10]-=20*value;
+        mContol[12]-=20*value;
 
         Log.e("value状态五",e+++"");
     }
@@ -339,7 +344,7 @@ public class Pellet extends View {
 
     //绘制四段贝塞尔
     private void drawBSR(Canvas canvas) {
-        Path path=new Path();
+
         path.moveTo(mData[0],mData[1]);
         path.cubicTo(mContol[0],mContol[1],mContol[2],mContol[3],mData[2],mData[3]);
         path.cubicTo(mContol[4],mContol[5],mContol[6],mContol[7],mData[4],mData[5]);
@@ -349,29 +354,30 @@ public class Pellet extends View {
     }
 
 
-
     //右移动动画效果
     public void startAnimation() {
+        path.reset();
 
         ObjectAnimator animator1 = ObjectAnimator.ofFloat(this, "translationX", 400f);
-        animator1.setDuration(2000);
+        animator1.setDuration(1000);
 
-        ValueAnimator valueAnimator=ValueAnimator.ofFloat(0,100);
+        ValueAnimator valueAnimator=ValueAnimator.ofFloat(0,1);
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                percentage= (float) valueAnimator.getAnimatedValue()/100;
+                percentage= (float) valueAnimator.getAnimatedValue();
                 Log.e("value",value+""+"    percentage"+percentage);
-                invalidate();//刷新
+
             }
         });
-        valueAnimator.setDuration(2000);
+        valueAnimator.setDuration(1000);
         valueAnimator.setInterpolator(new AccelerateDecelerateInterpolator());
 //         valueAnimator.start();
 
 
         AnimatorSet set=new AnimatorSet();
         set.playTogether(animator1,valueAnimator);
+        set.setDuration(1000);
         set.start();
     }
 }
